@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy Fest 2024</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #292b2c;
+            color: #fff;
+        }
+
+        header {
+            background-color: #007bff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #f8f9fa;
+        }
+
+        nav {
+            background-color: #343a40;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 1em;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        section {
+            padding: 2em;
+            margin: 20px;
+            background-color: #343a40;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #f8f9fa;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .event-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #007bff;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .event-card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        /* Countdown Timer Styles */
+        #countdown {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Prodigy Event 2024</h1>
+        <p>Ignite Your Imagination</p>
+    <h2>  10th And 11 FEB 2024 </h2>
+        <!-- Countdown Timer -->
+        <div id="countdown"></div>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#schedule">Event Schedule</a>
+        
+        <a href="#events">Events</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Jain College</h2>
+        <p>JGI HEADQUATERED AT BENGALURU REPRESENTTS A CLUSTER OF 90 VIBRANT EDUCATIONAL ESTABLISHMENTS. IN 25 YEARS, THE GROUP HAS GROWN TO SERVE OVER 40,000 STUDENTS AND 3,500 STAFF MEMBERS ENGAGED AT THE P12 [PRE SCHOOL TO GRADE 12], UNDERGRADUATE, POST-GRADUATE LEVELS ACROSS 53 CAMPUSES AND CENTERS OF EXCELLENCE. THE IGI REVOLUTION OF LEARNING HAS BEEN DISTINCT FROM THE STEREOTYPED VERSIONS OF EDUCATION WHICH PEOPLE ARE USED TO. THROUGH INNOVATIONS, WE HAVE BEEN EMPLOYING ENTREPRENEURSHIP IN THE DISPERSION OF EDUCATION. THIS IS EVIDENT FROM ITS PIONEERINHG INSTITUTIONS EMERGING WITH EVER INCREASING CONSTANCY AND QUALITY.
+</p>
+    
+    </section>
+
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <p>Plan your Prodigy journey with our detailed schedule featuring events, workshops, and competitions.</p>
+      
+    </section>
+
+
+
+    <section id="events">
+        <h2>Events</h2>
+        <div class="event-card">
+            <h3>Event 1: Gaming</h3>
+            <p>Description: Join us for a night of creativity, Gaming talents from various fields.</p>
+            <p>Requirements: 2 Android smartphone with 6gb ram,Headphones,keyboard</p>
+            <p>No of  participant:2</p>
+        </div>
+
+        <div class="event-card">
+            <h3>Event 2: CODEWAVE</h3>
+            <p>Description: STEP INTO THE SHADOWS OF DIGITAL REALM WITH OUR CODE CHALLENGE! UNCOVER HIDDEN ALGORITHMS, NAVIGATE THROUGH ENCRYPTED DATA, AND UNRAVEL ENIGMATIC CODING PUZZLES.DIVE DEEP INTO THE WORLD OF PROGRAMMING WITH A HINT OF MYSTERY, TEST YOUR CODING SKILLS IN THIS UNIQUE AND THRILLING EVENT.</p>
+            <p>Requrements:2 Laptops,Pendrive(min 8gb),Headphones</p>
+            <p></p>
+        </div>
+
+        <!-- Add more event cards as needed -->
+    </section>
+
+    <section id="contact">
+        
+        <p>Need assistance? Reach out to our friendly organizing committee. Here are our contact details for any inquiries.</p>
+        <h2>Contact Us</h2> CO-ORDINATOR </p> SOMESHWAR KALKHAMB</p>6362476701
+    </section>
+
+    <footer>
+        &copy; 2024 Prodigy Fest. All rights reserved.
+    </footer>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        var countDownDate = new Date("Feb 15, 2024 00:00:00").getTime();
+
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (10000*500 * 600 * 24));
+            var hours = Math.floor((distance % (200 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
+
